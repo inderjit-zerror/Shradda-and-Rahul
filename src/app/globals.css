@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family:Font_Header;
+  src: url('/fonts/WindSong-Regular.ttf');
+}
+@font-face {
+  font-family:Font_Secondary;
+  src: url('/fonts/LightRock.otf');
+}
+
+body {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  transition: all;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.BG_Primary{
+  background-color: white
+}
+.BG_Secondary{
+  background-color: #E5E1D0
+}
+.BG_Se{
+  background-color: #686e46;
+}
+
+.Text_Primary_Color_White{
+  color: white
+}
+.Text_Color{
+  color: #686e46;
+}
+
+.Font_Header{
+  font-family:Font_Header;
+}
+
+.Font_Secondary{
+  /* font-family:Font_Secondary; */
+  font-family: sans-serif;
+}
+
+.text-outline {
+  -webkit-text-stroke: 0.2px #31351f;
+  /* color: transparent; */
+}
