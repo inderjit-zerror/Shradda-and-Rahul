@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <LenisProvider>
           {children}
-          <Navbar />
+          {/* <Navbar /> */}
         </LenisProvider>
       </body>
     </html>
