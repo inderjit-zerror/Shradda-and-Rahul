@@ -50,3 +50,18 @@ html {
 
   /* color: transparent; */
 }
+
+
+.wedding-subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.wedding-title {
+  font-size: 4vw;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
