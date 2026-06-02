@@ -47,5 +47,6 @@ html {
 
 .text-outline {
   -webkit-text-stroke: 0.2px #31351f;
+
   /* color: transparent; */
 }
