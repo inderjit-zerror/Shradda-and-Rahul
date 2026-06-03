@@ -3,14 +3,15 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const menuItems = [
-  { img: "/elements/ICON 1_15_11zon.png", title: "Pyaar Dosti Hai" },
-  { img: "/elements/ICON 2_16_11zon.png", title: "From Marrakech, with Love" },
-  { img: "/elements/ICON 3_17_11zon.png", title: "Wedding Itinerary" },
-  { img: "/elements/4_14_11zon.png", title: "Travel and FAQs" },
+  { img: "/elements/ICON 1_15_11zon.png", title: "Pyaar Dosti Hai", link :`/pyaar-dosti-hai` },
+  { img: "/elements/ICON 2_16_11zon.png", title: "From Marrakech, with Love", link :`/` },
+  { img: "/elements/ICON 3_17_11zon.png", title: "Wedding Itinerary", link :`/` },
+  { img: "/elements/4_14_11zon.png", title: "Travel and FAQs", link :`/` },
 ];
 
 const Home = () => {
@@ -291,7 +292,9 @@ const Home = () => {
 
           {/* Menu */}
           <div className="grid w-fit grid-cols-4 gap-[3vw]">
-            {menuItems.map((item) => (
+            {menuItems.map((item,index) => (
+              <Link href={item.link} key={index}>
+             
               <div
                 key={item.title}
                 className="menu-item flex cursor-pointer flex-col items-center gap-3"
@@ -306,6 +309,7 @@ const Home = () => {
 
                 <p className="menu-text Font_Secondary text-[14px] uppercase max-w-[150px] text-center">{item.title}</p>
               </div>
+               </Link>
             ))}
           </div>
 
