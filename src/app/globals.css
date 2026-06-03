@@ -65,3 +65,13 @@ html {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
+
+@media (max-width: 640px) {
+  .wedding-title {
+    font-size: 3rem;
+    line-height: 0.95;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}

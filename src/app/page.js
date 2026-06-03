@@ -214,7 +214,7 @@ const Home = () => {
         />
 
         {/* Side Plants */}
-        <div className="BuildingElementL absolute bottom-0 left-[25%] z-[60] flex aspect-square w-1/6 items-center justify-center">
+        <div className="BuildingElementL absolute bottom-0 max-sm:hidden left-[25%] z-[60] flex aspect-square w-1/6 items-center justify-center">
           <img
             src="/elements/PLANT TALL_10_11zon.png"
             alt=""
@@ -222,7 +222,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="BuildingElementR absolute bottom-0 right-[25%] z-[60] flex aspect-square w-1/6 items-center justify-center">
+        <div className="BuildingElementR absolute bottom-0 max-sm:hidden right-[25%] z-[60] flex aspect-square w-1/6 items-center justify-center">
           <img
             src="/elements/PLANT TALL_10_11zon.png"
             alt=""
@@ -233,10 +233,10 @@ const Home = () => {
         {/* Doors */}
         <div
           ref={doorContainerRef}
-          className="absolute bottom-27 left-1/2 z-40 h-[58vh] w-1/5 -translate-x-1/2"
+          className="absolute max-sm:bottom-0 sm:bottom-27 left-1/2 z-40 h-[58vh]   max-sm:h-[70vh] max-sm:w-[70vw] w-1/5 -translate-x-1/2"
           style={{ perspective: "1200px" }}
         >
-          <div className="relative flex h-full w-full">
+          <div className="relative flex h-full w-full ">
             <div
               ref={leftDoorRef}
               className="h-full w-1/2 bg-[#F5F5F5]"
@@ -291,7 +291,7 @@ const Home = () => {
           </div>
 
           {/* Menu */}
-          <div className="grid w-fit grid-cols-4 gap-[3vw]">
+          <div className="grid w-fit grid-cols-4 gap-[3vw] max-sm:grid-cols-2">
             {menuItems.map((item,index) => (
               <Link href={item.link} key={index}>
              
@@ -314,7 +314,7 @@ const Home = () => {
           </div>
 
           {/* Side Frames */}
-          <div className="absolute left-0 flex h-screen w-1/4 justify-start">
+          <div className="absolute left-0 flex h-screen  max-sm:hidden w-1/4 justify-start">
             <img
               src="/elements/FULLL.png"
               alt=""
@@ -322,7 +322,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="absolute right-0 flex h-screen w-1/4 justify-end">
+          <div className="absolute right-0 flex h-screen max-sm:hidden  w-1/4 justify-end">
             <img
               src="/elements/FULLR.png"
               alt=""
