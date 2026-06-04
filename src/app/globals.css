@@ -1,6 +1,22 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family:F2 ;
+  src: url('/fonts/new/Cormorant-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family:F1 ;
+  src: url('/fonts/new/Cormorant-VariableFont_wght.ttf');
+}
+
+.F1{
+  font-family:F1 ;
+}
+.F2{
+  font-family:F2 ;
+}
+/* --------------------------------------------------------------- */
+@font-face {
   font-family:Font_Header;
   src: url('/fonts/WindSong-Regular.ttf');
 }
@@ -75,3 +91,5 @@ html {
     text-transform: uppercase;
   }
 }
+
+

@@ -15,7 +15,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "The festivities begin. Join us for sunset cocktails, great food, familiar faces, and the first of many dance-floor appearances.",
-    icon: "✦",
+    icon: "",
     tag: "DAY 01",
   },
   {
@@ -25,7 +25,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "Henna, sunshine, music, and plenty of colour. A relaxed afternoon filled with laughter, celebration, and beautiful traditions.",
-    icon: "✿",
+    icon: "",
     tag: "DAY 02",
   },
   {
@@ -35,7 +35,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "The battle of performances begins. Expect dancing, surprises, family rivalries, and enough energy to power Marrakech for a week.",
-    icon: "♫",
+    icon: "",
     tag: "DAY 02",
   },
   {
@@ -45,7 +45,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "A final send-off to Rahul's bachelor days. Come prepared for traditions, laughter, and a few stories best left unpublished.",
-    icon: "◆",
+    icon: "",
     tag: "DAY 03",
   },
   {
@@ -55,7 +55,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "An evening of celebration, heartfelt toasts, exceptional food, and the official beginning of the next chapter.",
-    icon: "◈",
+    icon: "",
     tag: "DAY 03",
   },
   {
@@ -65,7 +65,7 @@ const itineraryData = [
     venue: "Location Revealed Later",
     description:
       "For those still standing. The music gets louder, the shoes come off, and the celebrations continue long after midnight.",
-    icon: "⚡",
+    icon: "",
     tag: "DAY 03",
   },
   {
@@ -75,7 +75,7 @@ const itineraryData = [
     venue: "The Oberoi, Marrakech",
     description:
       "One final breakfast, a few last hugs, and countless memories packed alongside your luggage for the journey home.",
-    icon: "☼",
+    icon: "",
     tag: "DAY 04",
   },
 ];
@@ -85,7 +85,7 @@ const wardrobeData = [
   {
     guide: "The Devil Wears Shradda",
     subtitle: "Ladies' Guide",
-    icon: "♛",
+    icon: "",
     items: [
       { event: "Welcome Party", dress: "Cocktail / Indo-western chic" },
       { event: "Mehndi", dress: "Bright kurta set or lehenga" },
@@ -100,7 +100,7 @@ const wardrobeData = [
   {
     guide: "House of Modi",
     subtitle: "Men's Guide",
-    icon: "♞",
+    icon: "",
     items: [
       { event: "Welcome Party", dress: "Linen kurta or smart casual" },
       { event: "Mehndi", dress: "Colourful kurta-pyjama" },
@@ -132,25 +132,35 @@ export default function ItinerarySection() {
         subheadingRef.current,
         { opacity: 0, y: 30 },
         {
-          opacity: 1, y: 0, duration: 1, ease: "power3.out",
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
           scrollTrigger: { trigger: subheadingRef.current, start: "top 85%" },
-        }
+        },
       );
       gsap.fromTo(
         headingRef.current,
         { opacity: 0, y: 60, skewY: 3 },
         {
-          opacity: 1, y: 0, skewY: 0, duration: 1.2, ease: "power4.out",
+          opacity: 1,
+          y: 0,
+          skewY: 0,
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: { trigger: headingRef.current, start: "top 85%" },
-        }
+        },
       );
       gsap.fromTo(
         lineRef.current,
         { scaleX: 0 },
         {
-          scaleX: 1, duration: 1.2, delay: 0.4, ease: "power3.inOut",
+          scaleX: 1,
+          duration: 1.2,
+          delay: 0.4,
+          ease: "power3.inOut",
           scrollTrigger: { trigger: lineRef.current, start: "top 85%" },
-        }
+        },
       );
 
       // ── Timeline line ──
@@ -158,12 +168,16 @@ export default function ItinerarySection() {
         timelineLineRef.current,
         { scaleY: 0, transformOrigin: "top center" },
         {
-          scaleY: 1, duration: 2, ease: "power2.inOut",
+          scaleY: 1,
+          duration: 2,
+          ease: "power2.inOut",
           scrollTrigger: {
             trigger: timelineLineRef.current,
-            start: "top 80%", end: "bottom 20%", scrub: 1,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
           },
-        }
+        },
       );
 
       // ── Timeline cards ──
@@ -174,15 +188,19 @@ export default function ItinerarySection() {
           card,
           { opacity: 0, x: isLeft ? -80 : 80, y: 30 },
           {
-            opacity: 1, x: 0, y: 0, duration: 1, ease: "power3.out",
+            opacity: 1,
+            x: 0,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
             scrollTrigger: { trigger: card, start: "top 82%" },
-          }
+          },
         );
         card.addEventListener("mouseenter", () =>
-          gsap.to(card, { y: -6, duration: 0.4, ease: "power2.out" })
+          gsap.to(card, { y: -6, duration: 0.4, ease: "power2.out" }),
         );
         card.addEventListener("mouseleave", () =>
-          gsap.to(card, { y: 0, duration: 0.4, ease: "power2.inOut" })
+          gsap.to(card, { y: 0, duration: 0.4, ease: "power2.inOut" }),
         );
       });
 
@@ -191,9 +209,15 @@ export default function ItinerarySection() {
         wardrobeHeadingRef.current,
         { opacity: 0, y: 50 },
         {
-          opacity: 1, y: 0, duration: 1.2, ease: "power4.out",
-          scrollTrigger: { trigger: wardrobeHeadingRef.current, start: "top 85%" },
-        }
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: wardrobeHeadingRef.current,
+            start: "top 85%",
+          },
+        },
       );
 
       // ── Wardrobe cards ──
@@ -203,15 +227,19 @@ export default function ItinerarySection() {
           card,
           { opacity: 0, y: 60 },
           {
-            opacity: 1, y: 0, duration: 1, delay: i * 0.15, ease: "power3.out",
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: i * 0.15,
+            ease: "power3.out",
             scrollTrigger: { trigger: card, start: "top 85%" },
-          }
+          },
         );
         card.addEventListener("mouseenter", () =>
-          gsap.to(card, { y: -6, duration: 0.4, ease: "power2.out" })
+          gsap.to(card, { y: -6, duration: 0.4, ease: "power2.out" }),
         );
         card.addEventListener("mouseleave", () =>
-          gsap.to(card, { y: 0, duration: 0.4, ease: "power2.inOut" })
+          gsap.to(card, { y: 0, duration: 0.4, ease: "power2.inOut" }),
         );
       });
     }, sectionRef);
@@ -223,9 +251,29 @@ export default function ItinerarySection() {
     <section
       ref={sectionRef}
       className="relative min-h-screen overflow-hidden py-24 px-4"
-      style={{ backgroundColor: "#F5F2ED", fontFamily: "'Cormorant Garamond', serif" }}
+      style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
       {/* Background texture */}
+
+      <div className="fixed -left-[5%] top-0 flex h-screen  max-sm:hidden w-1/4 justify-start z-9">
+        <img
+          src="/newImg/L_IMG.png"
+          alt=""
+          className="h-full object-cover object-center"
+        />
+      </div>
+
+      <div className="fixed -right-[5%] top-0 flex h-svh max-sm:hidden  w-1/4 justify-end z-9">
+        <img src="/newImg/R_IMG.png" alt="" className="h-full object-cover" />
+      </div>
+
+      <div className="w-full h-screen fixed top-0 left-0 ">
+        <img
+          src="/newImg/bg.png"
+          alt="iomg"
+          className=" w-full h-full object-cover scale-[1.2] object-center absolute top-0 left-0 z-[-1]"
+        />
+      </div>
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -236,26 +284,28 @@ export default function ItinerarySection() {
       {/* Radial glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-10 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, #C9A84C 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, #C9A84C 0%, transparent 70%)",
+        }}
       />
 
-      <div className="relative max-w-6xl mx-auto">
-
+      <div className="relative max-w-6xl mx-auto z-999">
         {/* ═══════════════════════════════════════════════════════
             SECTION 1 — OVERVIEW
         ════════════════════════════════════════════════════════ */}
         <div className="text-center mb-24">
           <p
             ref={subheadingRef}
-            className="tracking-[0.4em] text-xs uppercase mb-6"
-            style={{ color: "#1F2B34", fontFamily: "'Montserrat', sans-serif" }}
+            className="tracking-[0.4em] text-[1rem] F1 font-semibold uppercase mb-6"
+            style={{ color: "#1F2B34" }}
           >
             Eat, Sleep, Bhangra, Repeat
-           
           </p>
 
           <h2
             ref={headingRef}
+            className="F2 font-semibold"
             style={{
               color: "#1F2B34",
               fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
@@ -263,10 +313,10 @@ export default function ItinerarySection() {
               letterSpacing: "-0.01em",
               fontStyle: "italic",
               lineHeight: 1.1,
-              fontFamily: "'Cormorant Garamond', serif",
+              // fontFamily: "'Cormorant Garamond', serif",
             }}
           >
-             Wedding Itinerary
+            Wedding Itinerary
             <br />
             <span style={{ fontStyle: "normal", fontWeight: 500 }}></span>
           </h2>
@@ -274,7 +324,11 @@ export default function ItinerarySection() {
           <div
             ref={lineRef}
             className="mx-auto mt-6 h-px origin-left"
-            style={{ width: "120px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }}
+            style={{
+              width: "120px",
+              background:
+                "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+            }}
           />
 
           {/* Overview tiles */}
@@ -359,7 +413,8 @@ export default function ItinerarySection() {
             ref={timelineLineRef}
             className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 hidden md:block"
             style={{
-              background: "linear-gradient(180deg, transparent, #C9A84C 15%, #C9A84C 85%, transparent)",
+              background:
+                "linear-gradient(180deg, transparent, #C9A84C 15%, #C9A84C 85%, transparent)",
               opacity: 0.3,
             }}
           />
@@ -382,19 +437,25 @@ export default function ItinerarySection() {
                     <div
                       className="relative p-8 rounded-sm overflow-hidden"
                       style={{
-                        backgroundColor: "#1F2B34",
+                        backgroundColor: "#885B33",
                         border: "1px solid rgba(201,168,76,0.15)",
                       }}
                     >
                       {/* Hover inner glow */}
                       <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 70%)" }}
+                        style={{
+                          background:
+                            "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 70%)",
+                        }}
                       />
                       {/* Top border accent */}
                       <div
                         className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-                        style={{ background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }}
+                        style={{
+                          background:
+                            "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+                        }}
                       />
 
                       <div className="relative z-10">
@@ -411,7 +472,12 @@ export default function ItinerarySection() {
                           >
                             {event.tag}
                           </span>
-                          <span className="text-2xl" style={{ color: "#C9A84C" }}>{event.icon}</span>
+                          <span
+                            className="text-2xl"
+                            style={{ color: "#C9A84C" }}
+                          >
+                            {event.icon}
+                          </span>
                         </div>
 
                         {/* Title */}
@@ -430,18 +496,36 @@ export default function ItinerarySection() {
                         </h3>
 
                         {/* Gold divider */}
-                        <div className="w-10 h-px mb-4" style={{ background: "#C9A84C" }} />
+                        <div
+                          className="w-10 h-px mb-4"
+                          style={{ background: "#C9A84C" }}
+                        />
 
                         {/* Meta */}
-                        <div className="space-y-1.5 mb-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                          <p className="text-xs tracking-widest" style={{ color: "rgba(255,255,255,0.7)" }}>
-                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp; {event.day}
+                        <div
+                          className="space-y-1.5 mb-4"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
+                        >
+                          <p
+                            className="text-xs tracking-widest"
+                            style={{ color: "rgba(255,255,255,0.7)" }}
+                          >
+                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp;{" "}
+                            {event.day}
                           </p>
-                          <p className="text-xs tracking-widest" style={{ color: "rgba(255,255,255,0.7)" }}>
-                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp; {event.time}
+                          <p
+                            className="text-xs tracking-widest"
+                            style={{ color: "rgba(255,255,255,0.7)" }}
+                          >
+                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp;{" "}
+                            {event.time}
                           </p>
-                          <p className="text-xs tracking-widest" style={{ color: "rgba(255,255,255,0.7)" }}>
-                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp; {event.venue}
+                          <p
+                            className="text-xs tracking-widest"
+                            style={{ color: "rgba(255,255,255,0.7)" }}
+                          >
+                            <span style={{ color: "#C9A84C" }}>◈</span>&nbsp;{" "}
+                            {event.venue}
                           </p>
                         </div>
 
@@ -465,7 +549,10 @@ export default function ItinerarySection() {
                   <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center z-10">
                     <div
                       className="w-3 h-3 rounded-full"
-                      style={{ background: "#C9A84C", boxShadow: "0 0 12px rgba(201,168,76,0.6)" }}
+                      style={{
+                        background: "#885B33",
+                        boxShadow: "0 0 12px rgba(201,168,76,0.6)",
+                      }}
                     />
                   </div>
 
@@ -501,7 +588,11 @@ export default function ItinerarySection() {
           </h2>
           <div
             className="mx-auto mt-4 h-px"
-            style={{ width: "80px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }}
+            style={{
+              width: "80px",
+              background:
+                "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+            }}
           />
         </div>
 
@@ -511,22 +602,33 @@ export default function ItinerarySection() {
               key={gi}
               ref={(el) => (wardrobeCardsRef.current[gi] = el)}
               className="relative rounded-sm overflow-hidden group cursor-default"
-              style={{ backgroundColor: "#1F2B34", border: "1px solid rgba(201,168,76,0.15)" }}
+              style={{
+                backgroundColor: "#885B33",
+                border: "1px solid rgba(201,168,76,0.15)",
+              }}
             >
               {/* Top border accent */}
               <div
                 className="absolute top-0 left-0 right-0 h-px opacity-40 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }}
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+                }}
               />
               {/* Hover glow */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%)" }}
+                style={{
+                  background:
+                    "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%)",
+                }}
               />
 
               <div className="relative z-10 p-8">
                 {/* Icon */}
-                <div className="text-3xl mb-4" style={{ color: "#C9A84C" }}>{guide.icon}</div>
+                <div className="text-3xl mb-4" style={{ color: "#C9A84C" }}>
+                  {guide.icon}
+                </div>
 
                 {/* Guide title */}
                 <h3
@@ -543,13 +645,19 @@ export default function ItinerarySection() {
                 </h3>
                 <p
                   className="text-xs tracking-[0.3em] uppercase mb-6"
-                  style={{ color: "#C9A84C", fontFamily: "'Montserrat', sans-serif" }}
+                  style={{
+                    color: "#C9A84C",
+                    fontFamily: "'Montserrat', sans-serif",
+                  }}
                 >
                   {guide.subtitle}
                 </p>
 
                 {/* Divider */}
-                <div className="w-10 h-px mb-6" style={{ background: "#C9A84C" }} />
+                <div
+                  className="w-10 h-px mb-6"
+                  style={{ background: "#C9A84C" }}
+                />
 
                 {/* Dress list */}
                 <div className="space-y-3 mb-6">
@@ -557,13 +665,23 @@ export default function ItinerarySection() {
                     <div
                       key={ii}
                       className="flex items-start gap-3 py-2"
-                      style={{ borderBottom: "1px solid rgba(201,168,76,0.08)" }}
+                      style={{
+                        borderBottom: "1px solid rgba(201,168,76,0.08)",
+                      }}
                     >
-                      <span className="text-xs mt-0.5" style={{ color: "#C9A84C" }}>◈</span>
+                      <span
+                        className="text-xs mt-0.5"
+                        style={{ color: "#C9A84C" }}
+                      >
+                        ◈
+                      </span>
                       <div>
                         <p
                           className="text-xs uppercase tracking-widest mb-0.5"
-                          style={{ color: "rgba(255,255,255,0.45)", fontFamily: "'Montserrat', sans-serif" }}
+                          style={{
+                            color: "rgba(255,255,255,0.45)",
+                            fontFamily: "'Montserrat', sans-serif",
+                          }}
                         >
                           {item.event}
                         </p>
@@ -599,7 +717,6 @@ export default function ItinerarySection() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
