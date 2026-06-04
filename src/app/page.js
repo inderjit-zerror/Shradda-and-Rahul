@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const menuItems = [
   { img: "/elements/ICON 1_15_11zon.png", title: "Pyaar Dosti Hai", link :`/pyaar-dosti-hai` },
-  { img: "/elements/ICON 2_16_11zon.png", title: "From Marrakech, with Love", link :`/` },
-  { img: "/elements/ICON 3_17_11zon.png", title: "Wedding Itinerary", link :`/` },
-  { img: "/elements/4_14_11zon.png", title: "Travel and FAQs", link :`/` },
+  { img: "/elements/ICON 2_16_11zon.png", title: "From Marrakech, with Love", link :`/from-marrakech-with-love` },
+  { img: "/elements/ICON 3_17_11zon.png", title: "Wedding Itinerary", link :`/wedding-itinerary` },
+  { img: "/elements/4_14_11zon.png", title: "Travel and FAQs", link :`/faq` },
 ];
 
 const Home = () => {
