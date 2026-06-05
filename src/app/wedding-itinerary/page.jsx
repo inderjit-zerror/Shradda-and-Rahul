@@ -250,7 +250,7 @@ export default function ItinerarySection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden py-24 px-4"
+      className="relative min-h-screen overflow-hidden py-50 px-4"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
       {/* Background texture */}

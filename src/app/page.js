@@ -124,23 +124,7 @@ const Home = () => {
       const weddingTitle = document.querySelector(".wedding-title");
       const weddingSubtitle = document.querySelector(".wedding-subtitle");
 
-      if (weddingTitle) {
-        weddingTitle.addEventListener("mouseenter", () => {
-          gsap.to(weddingTitle, {
-            scale: 1.05,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-        });
-
-        weddingTitle.addEventListener("mouseleave", () => {
-          gsap.to(weddingTitle, {
-            scale: 1,
-            duration: 0.4,
-            ease: "power2.out",
-          });
-        });
-      }
+      
 
       if (weddingSubtitle) {
         weddingSubtitle.addEventListener("mouseenter", () => {
@@ -292,9 +276,11 @@ const Home = () => {
               The Wedding Of
             </p>
 
-            <h1 className="wedding-title F1 cursor-pointer">
-              Shradda & Rahul
-            </h1>
+           
+
+            <div className="wedding-title w-[60vw] flex mx-auto">
+              <img src={`/img/home/Nam.png`} className="w-full object-cover object-center" />
+             </div>
           </div>
 
           {/* Menu */}
