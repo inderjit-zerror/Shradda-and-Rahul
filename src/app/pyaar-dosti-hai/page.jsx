@@ -1,17 +1,20 @@
-import BostonStory from "@/components/newPages/BostonStory";
-import Footer from "@/components/newPages/pdh/Footer";
-import Hero from "@/components/newPages/pdh/Hero";
-import Introduction from "@/components/newPages/pdh/Introduction";
-import TravelTimeline from "@/components/newPages/pdh/TravelTimeline";
-import React from "react";
+import Destiny from "@/components/newPages/pdh/Destiny";
+import Hearts from "@/components/newPages/pdh/Hearts";
+import HomeHeroSection from "@/components/newPages/pdh/HomeHeroSection";
+import Line from "@/components/newPages/pdh/Line";
+import WeddingHero from "@/components/newPages/pdh/WeddingHero";
+import Countdown from "@/components/pages/home/Countdown";
 
 const page = () => {
   return (
     <>
-      <Hero />
-      <Introduction />
-      <BostonStory />
-      <TravelTimeline />
+    <HomeHeroSection/>
+    <WeddingHero />
+    
+    <Countdown/>
+    <Hearts/>
+    <Destiny />
+      
     </>
   );
 };

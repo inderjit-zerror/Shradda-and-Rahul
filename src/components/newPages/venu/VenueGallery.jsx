@@ -78,12 +78,12 @@ const VenueGallery = ({slideImg, STA1Txt, STA2Txt}) => {
   return (
     <>
       <div className={`w-full h-fit flex flex-col justify-center text-center items-center ${STA1Txt == "" ? " pt-0vh": " pt-[5vh]"}  pb-[10vh]`}>
-        <div className="COLOR_TEXT_RED Font_Q text-[3vw] w-fit h-fit leading-[3vw]  max-md:text-[10vw] max-md:leading-[12vw] tracking-tight overflow-hidden">
-          <span className="flex MainTI F2 font-semibold capitalize">
+        <div className="COLOR_TEXT_RED F1 text-[3vw] w-fit h-fit leading-[3vw]  max-md:text-[10vw] max-md:leading-[12vw] tracking-tight overflow-hidden">
+          <span className="flex MainTI F1 font-semibold capitalize">
             {STA1Txt} <span className="max-md:hidden ml-4">{ STA2Txt}</span>
           </span>
         </div>
-        <div className="COLOR_TEXT_RED Font_Q text-[6vw] w-fit h-fit leading-[6vw]  max-md:text-[10vw] max-md:leading-[12vw] tracking-tight overflow-hidden">
+        <div className="COLOR_TEXT_RED F1 text-[6vw] w-fit h-fit leading-[6vw]  max-md:text-[10vw] max-md:leading-[12vw] tracking-tight overflow-hidden">
           <span className="flex sm:hidden MainTI">{STA2Txt}</span>
         </div>
       </div>

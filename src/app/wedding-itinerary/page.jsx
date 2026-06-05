@@ -298,16 +298,16 @@ export default function ItinerarySection() {
           <p
             ref={subheadingRef}
             className="tracking-[0.4em] text-[1rem] F1 font-semibold uppercase mb-6"
-            style={{ color: "#1F2B34" }}
+            style={{ color: "#1F1B34" }}
           >
             Eat, Sleep, Bhangra, Repeat
           </p>
 
           <h2
             ref={headingRef}
-            className="F2 font-semibold"
+            className="F1 font-semibold"
             style={{
-              color: "#1F2B34",
+              color: "#1F1B34",
               fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
               fontWeight: 300,
               letterSpacing: "-0.01em",
@@ -342,7 +342,7 @@ export default function ItinerarySection() {
               <div
                 key={i}
                 className="relative p-6 rounded-sm overflow-hidden group cursor-default"
-                style={{ backgroundColor: "#1F2B34", border: "1px solid rgba(201,168,76,0.15)" }}
+                style={{ backgroundColor: "#1F1B34", border: "1px solid rgba(201,168,76,0.15)" }}
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -390,7 +390,7 @@ export default function ItinerarySection() {
           </p>
           <h2
             style={{
-              color: "#1F2B34",
+              color: "#1F1B34",
               fontSize: "clamp(2.2rem, 4.5vw, 4rem)",
               fontWeight: 300,
               letterSpacing: "-0.01em",
@@ -576,7 +576,7 @@ export default function ItinerarySection() {
           </p> */}
           <h2
             style={{
-              color: "#1F2B34",
+              color: "#1F1B34",
               fontSize: "clamp(2.2rem, 4.5vw, 4rem)",
               fontWeight: 300,
               letterSpacing: "-0.01em",

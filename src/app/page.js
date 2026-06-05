@@ -224,7 +224,7 @@ const Home = () => {
         {/* Doors */}
         <div
           ref={doorContainerRef}
-          className="absolute max-sm:bottom-0  sm:bottom-27 left-1/2 z-40 h-[57vh]   max-sm:h-[70vh] max-sm:w-[70vw] w-1/6 -translate-x-1/2"
+          className="absolute max-sm:bottom-0  sm:bottom-20 left-1/2 z-40 h-[60vh]   max-sm:h-[70vh] max-sm:w-[70vw] w-1/5 -translate-x-1/2"
           style={{ perspective: "1200px" }}
         >
           <div className="relative flex h-full w-full ">

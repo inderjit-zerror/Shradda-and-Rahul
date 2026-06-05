@@ -87,9 +87,9 @@ export default function FAQ() {
 
       <div className="w-[80%] max-sm:w-full px-6 max-sm:px-[20px] flex flex-col gap-20 relative z-50">
         <h2
-          className="text-center text-[4vw] font-semibold  F2 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
+          className="text-center text-[4vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
           style={{
-            color: "#1F2B34",
+            color: "#1F1B34",
             // fontFamily: "'Cormorant Garamond', serif",
           }}
         >
@@ -109,9 +109,9 @@ export default function FAQ() {
                 className="group w-full flex items-center justify-between text-left"
               >
                 <span
-                  className="tracking-wide uppercase F2 text-[1.5rem] max-sm:text-[1.1rem] "
+                  className="tracking-wide uppercase F1 text-[1.5rem] max-sm:text-[1.1rem] "
                   style={{
-                    color: "#1F2B34",
+                    color: "#1F1B34",
                     
                     fontWeight: 500,
                   }}
@@ -133,7 +133,7 @@ export default function FAQ() {
                   />
                   <span
                     className="absolute inset-0 m-auto w-[7px] h-[7px]"
-                    style={{ backgroundColor: "#F5F2ED" }}
+                    style={{ backgroundColor: "#F5F1ED" }}
                   />
                 </span>
               </button>
@@ -165,7 +165,7 @@ export default function FAQ() {
               {/* HOVER LINE */}
               <div
                 className="w-0 h-px group-hover:w-full absolute bottom-0 left-0 transition-all duration-200"
-                style={{ backgroundColor: "#1F2B34" }}
+                style={{ backgroundColor: "#1F1B34" }}
               />
             </div>
           ))}

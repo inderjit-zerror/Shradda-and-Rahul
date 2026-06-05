@@ -62,8 +62,8 @@ const HeroSectionVenue = () => {
       />
 
       <div className="w-2/2 absolute max-sm:top-[20%] sm:top-[14%] left-1/2  justify-center items-center max-md:w-full -translate-x-1/2 flex flex-col  max-sm:px-5">
-        {/* <p className=' uppercase Font_YV  COLOR_TEXT_RED text-[6rem] leading-[6rem] max-md:text-[15vw] max-md:leading-[16vw] ' >THE wedding Venue</p> */}
-        {/* <h1 className=" uppercase Font_YV  COLOR_TEXT_RED text-[2.5vw] leading-[2.5vw] max-md:text-[1rem] max-md:leading-[1rem] mt-[2vh] overflow-hidden ">
+        {/* <p className=' uppercase F1  COLOR_TEXT_RED text-[6rem] leading-[6rem] max-md:text-[15vw] max-md:leading-[16vw] ' >THE wedding Venue</p> */}
+        {/* <h1 className=" uppercase F1  COLOR_TEXT_RED text-[2.5vw] leading-[2.5vw] max-md:text-[1rem] max-md:leading-[1rem] mt-[2vh] overflow-hidden ">
           <span className="flex WEDMAIMTT2 translate-y-[100%]">
             
           </span>
@@ -73,7 +73,7 @@ const HeroSectionVenue = () => {
   fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
   lineHeight: "clamp(3rem, 6.5vw, 6rem)",
 }}
-        className=" capitalize F2   mt-[2vh] max-md:mt-[0.5vh] overflow-hidden ">
+        className=" capitalize F1   mt-[2vh] max-md:mt-[0.5vh] overflow-hidden ">
           <span className="flex WEDMAIMTT2 text-center  translate-y-[100%] max-md:text-center">
             {" "}
             From Marrakech,

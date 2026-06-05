@@ -1,189 +1,202 @@
 "use client";
-
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import Link from "next/link";
-import { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { RiMenu4Fill, RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "next/navigation";
 
-const menuItems = [
-  {
-    img: "/newImg/ICON 1.png",
-    title: "Pyaar Dosti Hai",
-    link: "/pyaar-dosti-hai",
-  },
-  {
-    img: "/newImg/ICON 2.png",
-    title: "From Marrakech, with Love",
-    link: "/from-marrakech-with-love",
-  },
-  {
-    img: "/newImg/ICON 3.png",
-    title: "Wedding Itinerary",
-    link: "/wedding-itinerary",
-  },
-  {
-    img: "/newImg/ICON 4.png",
-    title: "Travel and FAQs",
-    link: "/faq",
-  },
-];
+gsap.registerPlugin(ScrollTrigger);
 
-export default function TopMenu() {
- const menuRef = useRef(null);
-const pathname = usePathname();
+const TopMenu = () => {
+  const navRef = useRef(null);
+  const pathname = usePathname();
 
-useGSAP(
-  () => {
-    if (pathname === "/") return;
+  const [isNavOpen, SetIsNavOpen] = useState(false);
 
-    const items = gsap.utils.toArray(".menu-item");
 
-    items.forEach((item) => {
-      const icon = item.querySelector(".menu-icon");
-      const text = item.querySelector(".menu-text");
-      const glow = item.querySelector(".menu-glow");
+   if (pathname === "/") return null;
 
-      const enter = () => {
-        gsap.to(icon, {
-          y: -8,
-          scale: 1.15,
-          duration: 0.45,
-          ease: "back.out(2)",
-        });
 
-        gsap.to(text, {
-          y: -3,
-          duration: 0.35,
-          ease: "power2.out",
-        });
+  // NAVBAR HIDE / SHOW
+  // useEffect(() => {
+  //   if (!navRef.current) return;
 
-        gsap.to(glow, {
+  //   let lastScroll = 0;
+
+  //   const trigger = ScrollTrigger.create({
+  //     start: 0,
+  //     end: "max",
+  //     onUpdate: (self) => {
+  //       const currentScroll = self.scroll();
+
+  //       if (currentScroll > lastScroll && currentScroll > 100) {
+  //         gsap.to(navRef.current, {
+  //           y: "-300%",
+  //           duration: 0.4,
+  //           ease: "power3.out",
+  //         });
+  //       } else {
+  //         gsap.to(navRef.current, {
+  //           y: "0%",
+  //           duration: 0.4,
+  //           ease: "power3.out",
+  //         });
+  //       }
+
+  //       lastScroll = currentScroll;
+  //     },
+  //   });
+
+  //   return () => {
+  //     trigger.kill();
+  //   };
+  // }, []);
+
+  // MOBILE MENU
+  const clickCheck = () => {
+    if (!isNavOpen) {
+      const tl = gsap.timeline();
+
+      tl.to(".MOBILENAV", {
+        right: "0%",
+        duration: 0.35,
+        ease: "power3.out",
+      });
+
+      tl.to(
+        ".smNavItem",
+        {
           opacity: 1,
-          scale: 1.3,
-          duration: 0.4,
-          ease: "power2.out",
-        });
-      };
-
-      const leave = () => {
-        gsap.to(icon, {
           y: 0,
-          scale: 1,
-          duration: 0.4,
-          ease: "power3.out",
-        });
-
-        gsap.to(text, {
-          y: 0,
+          stagger: 0.06,
           duration: 0.3,
           ease: "power3.out",
-        });
+        },
+        "-=0.2",
+      );
 
-        gsap.to(glow, {
-          opacity: 0,
-          scale: 0.8,
+      SetIsNavOpen(true);
+    } else {
+      const tl = gsap.timeline();
+
+      tl.to(".smNavItem", {
+        opacity: 0,
+        y: 20,
+        stagger: 0.04,
+        duration: 0.15,
+      });
+
+      tl.to(
+        ".MOBILENAV",
+        {
+          right: "-100%",
           duration: 0.3,
           ease: "power3.out",
-        });
-      };
+        },
+        "-=0.05",
+      );
 
-      item.addEventListener("mouseenter", enter);
-      item.addEventListener("mouseleave", leave);
+      SetIsNavOpen(false);
+    }
+  };
 
-      return () => {
-        item.removeEventListener("mouseenter", enter);
-        item.removeEventListener("mouseleave", leave);
-      };
-    });
+  const closeMenu = () => {
+    if (isNavOpen) clickCheck();
+  };
+  
+
+  const navLinks = [
+
+     {
+
+    name: "Pyaar Dosti Hai",
+    path: "/pyaar-dosti-hai",
   },
   {
-    scope: menuRef,
-    dependencies: [pathname],
-  }
-);
 
-if (pathname === "/") {
-  return null;
-}
+    name: "From Marrakech, with Love",
+    path: "/from-marrakech-with-love",
+  },
+  {
+
+    name: "Wedding Itinerary",
+    path: "/wedding-itinerary",
+  },
+  {
+
+    name: "Travel and FAQs",
+    path: "/faq",
+  },
+    
+  ];
 
   return (
-    <header className="fixed top-0  w-full  z-999">
-      <div className="mx-auto max-w-[1600px] px-4 lg:px-8 py-3">
-        <div
-          ref={menuRef}
-          className={`
-            flex
-            items-center
-            justify-center
-            gap-3
-            overflow-x-auto
-            py-3
-            scrollbar-hide
-            md:gap-5
-            lg:gap-8
-          `}
-        >
-          {menuItems.map((item, index) => (
-            <Link href={item.link} key={index} className="flex-shrink-0">
-              <div className="menu-item flex flex-col items-center gap-2">
-                {/* Icon */}
-                <div className="menu-icon relative flex items-center justify-center">
-                  {/* Glow */}
-                  <div
-                    className={`
-      menu-glow
-      absolute
-      h-12
-      w-12
-      rounded-full
-      bg-[#D4AF37]/20
-      blur-xl
-      opacity-0
-      scale-75
-      pointer-events-none
-    `}
-                  />
+    <>
+      {/* MAIN NAVBAR */}
+      <div
+        ref={navRef}
+        className="w-full h-[80px] fixed top-0 left-0 z-[999] px-5 lg:px-8 flex items-center justify-between"
+      >
+        {/* LOGO */}
+        <Link href={`/`} className="w-fit h-[40px] z-[1000]">
+          <img
+            src={`/newImg/logo.png`}
+            alt="Logo"
+            className="h-full object-contain"
+          />
+        </Link>
 
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className={`
-      relative z-10
-      h-8
-      w-8
-      object-contain
-      md:h-10
-      md:w-10
-    `}
-                  />
-                </div>
+        {/* DESKTOP NAV */}
+        <div className="hidden lg:flex items-center gap-[2vw]">
+          {navLinks.map((item, index) => (
+            <Link key={index} href={item.path}>
+              <div
+                className={`relative text-[14px] F1 text-[#202020] uppercase cursor-pointer group ${
+                  pathname === item.path ? "border-b border-[#202020]" : ""
+                }`}
+              >
+                <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#202020] group-hover:w-full duration-300"></div>
 
-                {/* Text */}
-                <p
-  className={`
-    menu-text
-    F1
-    max-w-[100px]
-    text-center
-    text-[10px]
-    font-semibold
-    uppercase
-    leading-tight
-    text-[#3A3925]
-    md:max-w-[120px]
-    md:text-[11px]
-    lg:max-w-[140px]
-    lg:text-[12px]
-  `}
->
-                  {item.title}
-                </p>
+                {item.name}
+              </div>
+            </Link>
+          ))}
+
+          
+        </div>
+
+        {/* MOBILE MENU BTN */}
+        <div onClick={clickCheck} className="lg:hidden z-[1001] cursor-pointer">
+          {isNavOpen ? (
+            <RiMenu3Line className="text-[2rem] text-[#416160]" />
+          ) : (
+            <RiMenu4Fill className="text-[2rem] text-[#416160]" />
+          )}
+        </div>
+      </div>
+
+      {/* MOBILE NAVIGATION */}
+      <div className="MOBILENAV fixed top-0 right-[-100%] w-full sm:w-[80%] h-screen bg-[#f8f5f1] z-[998] flex flex-col px-8 pt-[120px] pb-10">
+        {/* LINKS */}
+        <div className="flex flex-col gap-6">
+          {navLinks.map((item, index) => (
+            <Link key={index} href={item.path} onClick={closeMenu}>
+              <div
+                className={`smNavItem opacity-0 translate-y-[20px] text-[1.3rem] uppercase tracking-wide ${
+                  pathname === item.path ? "text-[#952607]" : "text-[#202020]"
+                }`}
+              >
+                {item.name}
               </div>
             </Link>
           ))}
         </div>
+
+        
       </div>
-    </header>
+    </>
   );
-}
+};
+
+export default TopMenu;
