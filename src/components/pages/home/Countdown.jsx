@@ -76,7 +76,7 @@ const Countdown = () => {
         </div>
         {/* ================================================================ */}
         <section className="pb-[10vh]  max-md:pb-[0vh] max-sm:pb-0 pt-20 max-sm:pt-0 w-full   h-fit select-none   max-md:mt-0 flex flex-col justify-center items-center text-center">
-          <div className="w-full h-fit flex justify-center gap-10 max-sm:gap-1 Text_Color CDD1 F1">
+          <div className="w-full h-fit flex justify-center gap-10 max-sm:gap-1 text-[#202020] CDD1 F1">
             {[
               { label: "Days", value: timeLeft.days },
               { label: "Hours", value: timeLeft.hours },
@@ -102,7 +102,7 @@ const Countdown = () => {
             ))}
           </div>
 
-          <h2 className="F1 tracking-widest text-[2vw]  uppercase Text_Color mt-10 max-sm:mt-10 CDD1">
+          <h2 className="F1 tracking-widest text-[2vw]  uppercase text-[#202020] mt-10 max-sm:mt-10 CDD1">
             Until the wedding
           </h2>
         </section>
