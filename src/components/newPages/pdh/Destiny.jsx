@@ -94,7 +94,7 @@ const Destiny = () => {
           {/* <img src={`/svgs/Title1Destiny.svg`} className='w-full T2T2T object-cover' alt="SVG" /> */}
 
           <div className="w-full h-fit flex justify-center gap-[2vw] items-center COLOR_TEXT_RED">
-            <h1 className="F1 uppercase text-[5vw] leading-[5vw] max-sm:text-[10vw]">
+            <h1 className="F1 uppercase text-[5vw] leading-[5vw] max-sm:text-[10vw] max-sm:text-center max-sm:mt-5 max-sm:leading-[10vw]">
               Pyaar Everywhere
             </h1>
             {/* <h1 className='F2 text-[8vw] leading-[8vw]'></h1> */}

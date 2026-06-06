@@ -35,7 +35,7 @@ const page = () => {
       <WeddingVenue/>
       {/* <MarrakechMap /> */}
       <VenueGallery slideImg={slideImg2} STA1Txt={'The Oberoi'} STA2Txt={'Marrakech'} />
-      <VenueGallery slideImg={slideImg1} STA1Txt={'Marrakech'} STA2Txt={', Morocco'} />
+      <VenueGallery slideImg={slideImg1} STA1Txt={'Marrakech,'} STA2Txt={'Morocco'} />
       {/* <OberoiSection /> */}
     </div>
     </>

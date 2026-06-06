@@ -102,7 +102,7 @@ const Countdown = () => {
             ))}
           </div>
 
-          <h2 className="F1 tracking-widest text-[2vw]  uppercase text-[#202020] mt-10 max-sm:mt-10 CDD1">
+          <h2 className="F1 tracking-widest text-[2vw] max-sm:text-[7vw] max-sm:mb-[5vh]  uppercase text-[#202020] mt-10 max-sm:mt-10 CDD1">
             Until the wedding
           </h2>
         </section>

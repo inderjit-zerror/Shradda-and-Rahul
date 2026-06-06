@@ -66,10 +66,10 @@ export default function FAQ() {
   return (
     <section
       id="FAQ"
-      className="min-h-screen max-sm:min-h-fit BG_Secondary w-full overflow-hidden  overflow-hidden  flex items-center relative justify-center max-sm:py-[20vw] py-[20vh]"
+      className="min-h-screen max-sm:min-h-fit BG_Secondary w-full overflow-hidden  overflow-hidden  flex items-center relative justify-center max-sm:py-[20vw] py-[20vh] z-[1]"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
-      <div className="w-full h-screen fixed top-0 left-0 ">
+      <div className="w-full h-screen fixed top-0 left-0 z-[-1] ">
         <img
           src="/newImg/bg.png"
           alt="iomg"
@@ -87,16 +87,16 @@ export default function FAQ() {
 
       <div className="w-[80%] max-sm:w-full px-6 max-sm:px-[20px] flex flex-col gap-20 relative z-50">
         <h2
-          className="text-center text-[4vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
+          className="text-center text-[4vw]  max-sm:text-[10vw] font-semibold  F1 flex flex-col justify-center items-center max-sm:justify-start max-sm:mt-10"
           style={{
-            color: "#1F1B34",
+            color: "#3A3925",
             // fontFamily: "'Cormorant Garamond', serif",
           }}
         >
           FAQ
         </h2>
 
-        <div className="space-y-6 w-full">
+        <div className="space-y-6 w-full z-50">
           {faqs.map((faq) => (
             <div
               key={faq.id}
@@ -150,7 +150,7 @@ export default function FAQ() {
                 }}
               >
                 <div
-                  className="mt-4 text-[22px] F1" 
+                  className="mt-4 text-[22px] F1 max-sm:text-[1.1rem]" 
                   style={{
                     color: "rgba(31,43,52,0.6)",
                    

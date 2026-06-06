@@ -100,7 +100,7 @@ const Hearts = () => {
 
 
             {/* SM */}
-            <div className='w-full h-screen overflow-hidden sticky flex flex-col px-[20px] text-[3rem] leading-[3rem] sm:hidden justify-center top-0 left-0 COLOR_BG_RED COLOR_TEXT_CREAM uppercase'>
+            <div className='w-full h-screen overflow-hidden sticky flex flex-col px-[20px] text-[3rem] leading-[3rem] sm:hidden justify-center top-0 left-0 COLOR_BG_RED text-white uppercase'>
                 {/* 1 */}
                 <div className=' w-full  overflow-hidden h-fit  F1 flex flex-col '>
                     <h1>Two</h1>

@@ -250,12 +250,12 @@ export default function ItinerarySection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden py-50 px-4"
+      className="relative min-h-screen overflow-hidden pt-50 sm:pb-50 max-sm:pb-[5vh]   px-4 z-[-1]"
       style={{ fontFamily: "'Cormorant Garamond', serif" }}
     >
       {/* Background texture */}
 
-      <div className="fixed -left-[5%] top-0 flex h-screen  max-sm:hidden w-1/4 justify-start z-9">
+      <div className="fixed -left-[5%] top-0 flex h-screen  max-sm:hidden w-1/4 justify-start z-[9]">
         <img
           src="/newImg/L_IMG.png"
           alt=""
@@ -263,11 +263,11 @@ export default function ItinerarySection() {
         />
       </div>
 
-      <div className="fixed -right-[5%] top-0 flex h-svh max-sm:hidden  w-1/4 justify-end z-9">
+      <div className="fixed -right-[5%] top-0 flex h-svh max-sm:hidden  w-1/4 justify-end z-[0]">
         <img src="/newImg/R_IMG.png" alt="" className="h-full object-cover" />
       </div>
 
-      <div className="w-full h-screen fixed top-0 left-0 ">
+      <div className="w-full h-screen fixed top-0 left-0 z-[-1]">
         <img
           src="/newImg/bg.png"
           alt="iomg"
@@ -308,7 +308,7 @@ export default function ItinerarySection() {
             className="F1 font-semibold uppercase"
             style={{
               color: "#1F1B34",
-              fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
+              fontSize: "clamp(3rem, 6vw, 5.5rem)",
               fontWeight: 300,
               letterSpacing: "-0.01em",
               // fontStyle: "italic",

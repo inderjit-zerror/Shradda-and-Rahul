@@ -459,7 +459,7 @@ const Home = () => {
 
           <div className="wedding-container text-center pb-[8vh]">
             <p className="wedding-subtitle F2 font-semibold cursor-pointer">The Wedding Of</p>
-            <div className="wedding-title w-[60vw] flex mx-auto">
+            <div className="wedding-title w-[60vw] max-sm:w-[80vw] flex mx-auto">
               <img src="/img/home/Nam.png" className="w-full object-cover object-center" />
             </div>
           </div>

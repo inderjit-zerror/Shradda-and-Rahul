@@ -4,8 +4,8 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="w-full bg-[#EFC7A9]  border-t border-[#5513013b] max-md:px-5  flex flex-col max-md:justify-center max-sm:items-center  overflow-hidden">
-        <div className="flex max-md:flex-col max-md:justify-center max-sm:items-center py-8 px-10">
+      <footer className="w-full bg-[#EFC7A9]  border-t border-[#5513013b] max-md:px-5  flex flex-col max-md:justify-center max-sm:items-center  overflow-hidden z-998">
+        <div className="flex max-md:flex-col max-md:justify-center max-sm:items-center py-8 px-10 z-998">
           <div className="w-fit h-fit flex justify-center items-center   md:my-auto">
             <Link href={`/`}>
               <img
