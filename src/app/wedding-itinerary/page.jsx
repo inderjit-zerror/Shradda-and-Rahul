@@ -305,13 +305,13 @@ export default function ItinerarySection() {
 
           <h2
             ref={headingRef}
-            className="F1 font-semibold"
+            className="F1 font-semibold uppercase"
             style={{
               color: "#1F1B34",
               fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
               fontWeight: 300,
               letterSpacing: "-0.01em",
-              fontStyle: "italic",
+              // fontStyle: "italic",
               lineHeight: 1.1,
               // fontFamily: "'Cormorant Garamond', serif",
             }}

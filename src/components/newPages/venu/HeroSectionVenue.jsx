@@ -74,7 +74,7 @@ const HeroSectionVenue = () => {
   lineHeight: "clamp(3rem, 6.5vw, 6rem)",
 }}
         className=" capitalize F1   mt-[2vh] max-md:mt-[0.5vh] overflow-hidden ">
-          <span className="flex WEDMAIMTT2 text-center  translate-y-[100%] max-md:text-center">
+          <span className="flex WEDMAIMTT2 text-center uppercase  translate-y-[100%] max-md:text-center">
             {" "}
             From Marrakech,
           <br />

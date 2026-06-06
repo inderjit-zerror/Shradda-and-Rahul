@@ -8,6 +8,8 @@ import Countdown from "@/components/pages/home/Countdown";
 const page = () => {
   return (
     <>
+
+   
     <HomeHeroSection/>
     <WeddingHero />
     

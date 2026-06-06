@@ -56,11 +56,11 @@ const  WeddingHero = () => {
         {/* Date */}
         <div className="mt-6 flex items-center justify-center gap-4 mt-10 COLOR_TEXT_RED WHD1">
           <span className="text-[18px] font-medium F1  tracking-widest uppercase">
-            September
+            October
           </span>
 
           <span className="text-2xl md:text-[40px] F1">
-            21<sup className="text-sm F1 ">st</sup> – 24 <sup className="text-sm">th</sup>
+            20<sup className="text-sm F1 ">th</sup> – 23 <sup className="text-sm">th</sup>
           </span>
 
           <span className="text-[18px] font-medium F1  tracking-widest uppercase">

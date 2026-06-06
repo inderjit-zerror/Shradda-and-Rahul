@@ -72,7 +72,7 @@ const Countdown = () => {
     <>
       <div id="Date" className="bg-[#EFC7A9]">
         <div className="LINEDIVCONTAINER w-full h-[20vh] flex bg-[#EFC7A9] justify-center items-top pt-[8vh]">
-          <div className="LINEDIV w-[2px] h-[0%] BG_Se "></div>
+          <div className="LINEDIV w-[2px] h-[0%] bg-[#202020] "></div>
         </div>
         {/* ================================================================ */}
         <section className="pb-[10vh]  max-md:pb-[0vh] max-sm:pb-0 pt-20 max-sm:pt-0 w-full   h-fit select-none   max-md:mt-0 flex flex-col justify-center items-center text-center">
