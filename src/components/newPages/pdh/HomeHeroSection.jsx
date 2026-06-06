@@ -60,7 +60,7 @@ const HomeHeroSection = () => {
                 <Image
                     ref={imageRefHome}
                     src={`/elements/H.jpg`}
-                    className='w-full h-full scale-[1] opacity-0 object-cover object-[50%_30%] max-sm:object-[35%_50%] '
+                    className='w-full h-full scale-[1] opacity-0 object-cover object-[50%_30%]  max-sm:object-[42%_50%] '
                     width={1000}
                     height={1000}
                     alt='IMG'
